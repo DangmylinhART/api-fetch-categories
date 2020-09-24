@@ -21,8 +21,31 @@
 // // Make sure to also list the category in the opening string in all caps 
 // // The dynamically chosen random category below is Animals
 // // Copy the format
-// EXAMPLE OUTPUT: 
 
+const fetch = require('node-fetch')
+const url = 'https://api.publicapis.org/entries'
+//call it -> return promise --> convert Json
+// fetch(url)
+//     .then((data) => data.json())
+//     .then((data2) => data2.entries
+//         .filter((curr) => curr.Category === 'Animals')
+//         .map(({ API, Description, Link, Category }) => {
+//             console.log(`
+//             API: ${API}, 
+//             Description: ${Description}, 
+//             Link: ${Link}, 
+//             Category: ${Category}
+
+//             _ _ _
+//             `)
+//         })
+//     )
+
+
+
+
+
+// EXAMPLE OUTPUT:
 // You random category is ANIMALS:
 
 // API: Cat Facts
@@ -112,8 +135,8 @@
 // Description: Based on the Stanford Dogs Dataset
 // Link: https://dog.ceo/dog-api/
 // Category: Animals
-// Api: HTTPCat
 
+// Api: HTTPCat
 // Description: Cat for every HTTP Status
 // Link: https://http.cat/
 // Category: Animals
@@ -152,3 +175,11 @@
 // Link: https://http.cat/
 // Category: Anti-Malware
 // ....and so on for each of the 45 categories
+
+fetch(url)
+    .then((data) => data.json())
+    .then((data2) => data2.entries
+        .filter((curr) => 
+        if (curr.Category === 'Animals'){
+        }
+        )
